@@ -14,6 +14,7 @@ SRC_URI="http://launchpad.net/gwibber/2.32/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=dev-python/dbus-python-0.80.2
