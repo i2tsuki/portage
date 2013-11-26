@@ -19,7 +19,7 @@ RDEPEND=">=dev-db/couchdb-0.10.0
 	>=dev-python/gnome-keyring-python-2.22.3-r1
 	=dev-python/oauth-1.0.1
 	>=dev-python/simplejson-2.0.9-r1
-	>=dev-python/twisted-8.2.0-r2
+	>=dev-python/twisted-core-8.2.0-r2
 	>=net-dns/avahi-0.6.24-r2[python]"
 RESTRICT="test"
 
