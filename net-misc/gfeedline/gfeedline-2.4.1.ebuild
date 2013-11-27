@@ -28,7 +28,7 @@ src_install() {
 	distutils_src_install
 }
 
-pkg_preinst() {
+pkg_config() {
 	cp ./share/com.googlecode.gfeedline.gschema.xml.in /usr/share/glib-2.0/schemas/com.googlecode.gfeedline.gschema.xml
 	glib-compile-schemas /usr/share/glib-2.0/schemas
 }
