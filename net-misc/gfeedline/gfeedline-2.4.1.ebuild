@@ -26,6 +26,8 @@ RDEPEND=">=gnome-base/gsettings-desktop-schemas-3.6.1
 
 src_install() {
 	distutils_src_install
+	cp ./share/com.googlecode.gfeedline.gschema.xml.in /usr/share/glib-2.0/schemas/com.googlecode.gfeedline.gschema.xml
+	glib-compile-schemas /usr/share/glib-2.0/schemas
 }
 
 pkg_preinst() {
