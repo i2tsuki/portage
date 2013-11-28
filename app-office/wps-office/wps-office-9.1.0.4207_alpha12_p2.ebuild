@@ -18,7 +18,11 @@ fi
 
 case ${PV} in
 	*_alpha*)
+<<<<<<< HEAD
 		KEYWORDS="amd64 x86"
+=======
+		KEYWORDS="~amd64 ~x86"
+>>>>>>> 302b15b7d97f53a4f206c987538c1962d85789cf
 		MY_VV=${MY_PV}~${MY_V/alpha/a}${MY_SP}
 		;;
 	*_beta*)
@@ -37,7 +41,11 @@ HOMEPAGE="http://www.wps.cn"
 MY_PN=kingsoft-office
 
 SRC_URI="http://wdl.cache.ijinshan.com/wps/download/Linux/unstable/${MY_PN}_${MY_VV}_i386.deb
+<<<<<<< HEAD
 		 http://wps-community.org/download/tools/wps_merge_old_conf.sh"
+=======
+         http://wps-community.org/download/tools/wps_merge_old_conf.sh"
+>>>>>>> 302b15b7d97f53a4f206c987538c1962d85789cf
 
 SLOT="0"
 RESTRICT="strip mirror"
@@ -89,9 +97,15 @@ src_install() {
 	doexe ${S}/usr/bin/wps
 	doexe ${S}/usr/bin/wpp
 	doexe ${S}/usr/bin/et
+<<<<<<< HEAD
 
 	cp "${DISTDIR}/wps_merge_old_conf.sh" "${S}/usr/bin"
 	doexe ${S}/usr/bin/wps_merge_old_conf.sh
+=======
+	
+	cp "${DISTDIR}/wps_merge_old_conf.sh" "${S}/usr/bin"
+    doexe ${S}/usr/bin/wps_merge_old_conf.sh
+>>>>>>> 302b15b7d97f53a4f206c987538c1962d85789cf
 
 	if ! use sharedfonts; then
 		insinto /opt/kingsoft/wps-office/office6/fonts
