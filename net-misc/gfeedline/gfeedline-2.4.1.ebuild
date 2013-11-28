@@ -11,7 +11,7 @@ DESCRIPTION="GFeedLine is a social networking client. "
 HOMEPAGE="https://code.google.com/p/gfeedline/‎"
 SRC_URI="http://gfeedline.googlecode.com/files/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="gnome"
@@ -26,7 +26,6 @@ RDEPEND=">=gnome-base/gsettings-desktop-schemas-3.6.1
 
 src_install() {
 	distutils_src_install
-	install ./share/com.googlecode.gfeedline.gschema.xml.in /usr/share/glib-2.0/schemas/com.googlecode.gfeedline.gschema.xml
 }
 
 pkg_config() {
