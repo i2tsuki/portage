@@ -4,18 +4,17 @@
 
 EAPI="5"
 
-DESCRIPTION="Yet Another Japanese Dependency Structure Analyzer"
-HOMEPAGE="http://code.google.com/p/cabocha/"
-SRC_URI="http://cabocha.googlecode.com/files/${P}.tar.bz2"
+DESCRIPTION="Kurohashi and Nagao Japanese Dependency Parser"
+HOMEPAGE="http://nlp.ist.i.kyoto-u.ac.jp/"
+SRC_URI="http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/knp/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86 amd64-linux x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 x86"
 
 IUSE="unicode"
 
-DEPEND="app-text/crf++
-		app-text/mecab"
+DEPEND=""
 
 src_configure() {
 	local myargs=""
