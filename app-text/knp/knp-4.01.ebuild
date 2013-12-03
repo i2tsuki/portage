@@ -12,15 +12,17 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="unicode"
+IUSE="debug"
 
 DEPEND=">=app-text/juman-7.0"
 
 src_configure() {
 	local myargs=""
-	if use unicode; then
-		myargs="${myargs} --with-charset=utf8"
+
+	if use debug; then
+		myargs="${myargs} --enable-debug"
 	fi
+
 	econf ${myargs}
 }
 
