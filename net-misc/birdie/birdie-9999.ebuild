@@ -13,7 +13,7 @@ EBZR_REPO_URI="lp:birdie"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 IUSE="granite"
 
 RDEPEND="dev-db/sqlite:3
@@ -31,6 +31,7 @@ RDEPEND="dev-db/sqlite:3
 	x11-libs/libwnck:3
 	>=x11-themes/gnome-themes-standard-3.6.5
 	granite? ( >=dev-libs/granite-0.2.1 )"
+
 DEPEND="${RDEPEND}
 	$(vala_depend)
 	virtual/pkgconfig"

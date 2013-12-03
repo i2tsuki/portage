@@ -12,15 +12,24 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="debug"
+IUSE="debug cdb +berkdb"
 
-DEPEND=">=app-text/juman-7.0"
+DEPEND=">=app-text/juman-7.0
+		cdb? ( >=dev-db/tinycdb-0.77-r2 )"
 
 src_configure() {
 	local myargs=""
 
 	if use debug; then
 		myargs="${myargs} --enable-debug"
+	fi
+
+	if use cdb; then
+		myargs="${myargs} --with-cdb"
+	fi
+
+	if use berkdb; then
+		myargs="${myargs} --with-berkeley-db"
 	fi
 
 	econf ${myargs}

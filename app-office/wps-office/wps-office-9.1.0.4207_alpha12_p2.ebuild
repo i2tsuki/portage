@@ -49,7 +49,7 @@ RDEPEND="
 		app-arch/bzip2
 		dev-libs/expat
 		dev-libs/libffi
-		dev-libs/glib:2
+		dev-libs/glib:2hell
 		x11-libs/libICE
 		x11-libs/libX11
 		x11-libs/libXau
