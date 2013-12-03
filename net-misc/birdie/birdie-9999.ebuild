@@ -9,7 +9,9 @@ inherit bzr cmake-utils eutils fdo-mime gnome2-utils vala
 
 DESCRIPTION="Twitter client for elementary OS"
 HOMEPAGE="http://www.ivonunes.net/birdie"
-EBZR_REPO_URI="lp:birdie"
+
+EGIT_REPO_URI="https://github.com/birdieapp/birdie"
+EGIT_BRANCH="master"
 
 LICENSE="GPL-3"
 SLOT="0"
