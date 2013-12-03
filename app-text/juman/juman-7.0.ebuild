@@ -12,16 +12,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="unicode"
-
 DEPEND=""
 
 src_configure() {
-	local myargs=""
-	if use unicode; then
-		myargs="${myargs} --with-charset=utf8"
-	fi
-	econf ${myargs}
+	econf
 }
 
 src_compile() {
