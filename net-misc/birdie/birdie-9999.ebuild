@@ -5,7 +5,7 @@
 EAPI=5
 VALA_MIN_API_VERSION=0.16
 
-inherit bzr cmake-utils eutils fdo-mime gnome2-utils vala
+inherit git-2 cmake-utils eutils fdo-mime gnome2-utils vala
 
 DESCRIPTION="Twitter client for elementary OS"
 HOMEPAGE="http://www.ivonunes.net/birdie"
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="granite"
 
-RDEPEND="dev-db/sqlite:3
+RDEPEND="dev-vcs/git
+	dev-db/sqlite:3
 	dev-libs/glib:2
 	dev-libs/json-glib
 	dev-libs/libdbusmenu:3[introspection]
