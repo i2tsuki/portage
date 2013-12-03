@@ -12,7 +12,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="debug tinycdb berkdb"
+IUSE="debug +tinycdb"
 
 DEPEND=">=app-text/juman-7.0
 		tinycdb? ( >=dev-db/tinycdb-0.77-r2 )"
@@ -26,10 +26,6 @@ src_configure() {
 
 	if use tinycdb; then
 		myargs="${myargs} --with-cdb"
-	fi
-
-	if use berkdb; then
-		myargs="${myargs} --with-berkeley-db"
 	fi
 
 	econf ${myargs}
