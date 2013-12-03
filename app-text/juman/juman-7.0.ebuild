@@ -35,5 +35,5 @@ src_test() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS README TODO
+	dodoc AUTHORS README doc/manual.pdf
 }
