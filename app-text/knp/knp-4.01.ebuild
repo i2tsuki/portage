@@ -12,10 +12,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="debug cdb +berkdb"
+IUSE="debug tinycdb berkdb"
 
 DEPEND=">=app-text/juman-7.0
-		cdb? ( >=dev-db/tinycdb-0.77-r2 )"
+		tinycdb? ( >=dev-db/tinycdb-0.77-r2 )"
 
 src_configure() {
 	local myargs=""
