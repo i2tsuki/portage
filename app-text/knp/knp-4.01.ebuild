@@ -24,7 +24,7 @@ src_configure() {
 		myargs="${myargs} --enable-debug"
 	fi
 
-	if use cdb; then
+	if use tinycdb; then
 		myargs="${myargs} --with-cdb"
 	fi
 
