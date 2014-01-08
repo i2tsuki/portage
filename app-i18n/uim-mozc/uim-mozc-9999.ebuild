@@ -11,7 +11,7 @@ HOMEPAGE="http://code.google.com/p/mozc/ http://macuim.googlecode.com/svn/trunk/
 
 PROTOBUF_VER="2.4.1"
 GMOCK_VER="403"
-MOZC_VER="1.10.1390.102"
+MOZC_VER="1.6.1187.102"
 
 MOZC_URL="http://mozc.googlecode.com/files/mozc-${MOZC_VER}.tar.bz2"
 
@@ -64,8 +64,8 @@ src_unpack() {
 src_prepare() {
 
 	cd "${S}"
-	# svn export -r 320 --force https://macuim.googlecode.com/svn/trunk/Mozc Mozc || die "svn failed"
-	svn export --force https://macuim.googlecode.com/svn/trunk/Mozc Mozc || die "svn failed"
+	svn export -r 320 --force https://macuim.googlecode.com/svn/trunk/Mozc Mozc || die "svn failed"
+	# svn export --force https://macuim.googlecode.com/svn/trunk/Mozc Mozc || die "svn failed"
 	rsync -auv --exclude=.svn "${S}/Mozc/uim" "${S}/unix/" || die "rsync failed"
 	patch -p0 < "${S}/Mozc/mozc-kill-line.diff" || die "patch failed"
 
