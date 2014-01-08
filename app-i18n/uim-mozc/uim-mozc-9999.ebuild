@@ -21,7 +21,7 @@ SRC_URI="${MOZC_URL} ${PROTOBUF_URL}"
 
 LICENSE="Apache-2.0 BSD Boost-1.0 ipadic public-domain unicode"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="emacs +qt4 renderer"
 
