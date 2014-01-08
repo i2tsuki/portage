@@ -64,7 +64,7 @@ src_unpack() {
 src_prepare() {
 
 	cd "${S}"
-	svn export -r 320 --force https://macuim.googlecode.com/svn/trunk/Mozc Mozc || die "svn failed"
+	svn export -r 331 --force https://macuim.googlecode.com/svn/trunk/Mozc Mozc || die "svn failed"
 	rsync -auv --exclude=.svn "${S}/Mozc/uim" "${S}/unix/" || die "rsync failed"
 	patch -p0 < "${S}/Mozc/mozc-kill-line.diff" || die "patch failed"
 
