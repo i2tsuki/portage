@@ -10,7 +10,7 @@ SRC_URI="http://cabocha.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-# KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 
 IUSE=""
 #IUSE="perl python ruby"
