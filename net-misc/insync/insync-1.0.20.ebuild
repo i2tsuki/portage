@@ -14,7 +14,7 @@ dolphin? ( http://s.insynchq.com/builds/insync-dolphin_${PV}_all.deb )
 thunar? ( http://s.insynchq.com/builds/insync-thunar_${PV}_all.deb )"
 
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="x86 amd64"
 DEPEND=""
 RDEPEND="${DEPEND}
 nautilus? ( dev-python/nautilus-python )
