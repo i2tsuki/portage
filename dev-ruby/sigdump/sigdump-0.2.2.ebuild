@@ -8,9 +8,7 @@ USE_RUBY="ruby19 ruby20"
 RUBY_FAKEGEM_TASK_DOC="docs"
 
 RUBY_FAKEGEM_DOCDIR="doc"
-RUBY_FAKEGEM_EXTRADOC="History.txt Manifest.txt README.txt"
-
-RUBY_FAKEGEM_EXTRAINSTALL="template"
+RUBY_FAKEGEM_EXTRADOC="README.md"
 
 inherit ruby-fakegem
 
