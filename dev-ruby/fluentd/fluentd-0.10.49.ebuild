@@ -8,7 +8,7 @@ USE_RUBY="ruby19 ruby20"
 RUBY_FAKEGEM_TASK_DOC="docs"
 
 RUBY_FAKEGEM_DOCDIR="doc"
-RUBY_FAKEGEM_TASK_TEST="test"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_EXTRADOC="AUTHORS ChangeLog README.md"
 RUBY_FAKEGEM_EXTRAINSTALL="fluent.conf"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://fluentd.org/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )"
