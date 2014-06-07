@@ -12,6 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-libs/libcdio"
+
+
 RDEPEND=""
 
 DOCS=( test.py )
