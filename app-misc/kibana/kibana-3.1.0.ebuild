@@ -15,6 +15,6 @@ SLOT="0"
 RDEPEND="virtual/jre"
 
 src_install() {
-	insinto /usr/
-	doins .
+	insinto /usr/lib/kibana/
+	doins
 }
