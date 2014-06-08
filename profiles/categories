@@ -1,4 +1,5 @@
 app-i18n
+app-misc
 app-office
 app-text
 dev-db
@@ -9,4 +10,3 @@ net-misc
 profiles
 x11-misc
 dev-ruby
-sys-cluster
