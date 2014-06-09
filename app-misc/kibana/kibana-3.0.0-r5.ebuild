@@ -5,7 +5,7 @@ EAPI=5
 
 DESCRIPTION="Visualize logs and time-stamped data"
 HOMEPAGE="http://www.elasticsearch.org/"
-SRC_URI="http://download.elasticsearch.org/${PN}/${PN}/${P}.tar.gz"
+SRC_URI="http://download.elasticsearch.org/${PN}/${PN}/${P}milestone5.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 IUSE=""
