@@ -1,3 +1,4 @@
+app-cdr
 app-i18n
 app-misc
 app-office
@@ -10,3 +11,4 @@ net-misc
 profiles
 x11-misc
 dev-ruby
+www-plugins
