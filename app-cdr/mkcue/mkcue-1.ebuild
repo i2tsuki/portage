@@ -18,6 +18,11 @@ RESTRICT="mirror"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	mv ${WORKDIR}/mkcue-1.orig ${S}
+}
+
 src_install() {
 	# make install does not work because target directory does not exist
 	dobin mkcue
