@@ -15,6 +15,8 @@ EGIT_REPO_URI="git://github.com/atom/atom"
 LICENSE="MIT"
 SLOT="0"
 
+KEYWORDS="amd64 x86"
+
 # if [[ ${PV} == *9999 ]];then
 # 	KEYWORDS=""
 # else
