@@ -16,5 +16,5 @@ LICENSE="GPL"
 SLOT="0"
 
 DEPEND="${RDEPEND}
->=media-gfx/graphicsmagic-1.3.18
+>=media-gfx/graphicsmagick-1.3.18
 >=dev-libs/boost-1.52.0-r7"
