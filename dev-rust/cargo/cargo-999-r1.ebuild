@@ -28,6 +28,11 @@ src_unpack() {
 	mv cargo-nightly-${TRIPLE} ${PN}-${PV}
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-no-sanity-check.patch"
+}
+
+
 src_configure() {
 	:
 }
