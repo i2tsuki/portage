@@ -29,7 +29,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-no-sanity-check.patch"
+	# epatch "${FILESDIR}/${PN}-no-sanity-check.patch"
+	:
 }
 
 
@@ -41,6 +42,6 @@ src_compile(){
 	:
 }
 
-src_install() {
-	./install.sh --prefix=/usr
+_install() {
+	doexe ./install.sh --prefix=/usr
 }

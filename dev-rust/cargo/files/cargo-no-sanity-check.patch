@@ -1,6 +1,6 @@
---- ./a/install.sh	2014-12-21 16:54:41.000000000 +0900
-+++ ./b/install.sh	2014-12-22 02:39:24.376676682 +0900
-@@ -370,18 +370,6 @@
+--- a/install.sh	2014-12-21 16:54:41.000000000 +0900
++++ b/install.sh	2014-12-22 02:56:28.426667115 +0900
+@@ -370,28 +370,6 @@
      fi
  fi
 
@@ -16,6 +16,30 @@
 -rm -f "${CFG_LIBDIR}/rust-install-probe"
 -need_ok "failed to remove install probe"
 -
- # Sanity check: don't install to the directory containing the installer.
- # That would surely cause chaos.
- msg "verifying destination is not the same as source"
+-# Sanity check: don't install to the directory containing the installer.
+-# That would surely cause chaos.
+-msg "verifying destination is not the same as source"
+-INSTALLER_DIR="$(cd $(dirname $0) && pwd)"
+-PREFIX_DIR="$(cd ${CFG_PREFIX} && pwd)"
+-if [ "${INSTALLER_DIR}" = "${PREFIX_DIR}" ]
+-then
+-    err "can't install to same directory as installer"
+-fi
+-
+ # Using an absolute path to libdir in a few places so that the status
+ # messages are consistently using absolute paths.
+ absolutify "${CFG_LIBDIR}"
+@@ -454,14 +432,6 @@
+     exit 0
+ fi
+
+-# Create the installed manifest, which we will fill in with absolute file paths
+-mkdir -p "${CFG_LIBDIR}/${TEMPLATE_REL_MANIFEST_DIR}"
+-need_ok "failed to create ${TEMPLATE_REL_MANIFEST_DIR}"
+-touch "${INSTALLED_MANIFEST}"
+-need_ok "failed to create installed manifest"
+-
+-msg
+-
+ # Now install, iterate through the new manifest and copy files
+ while read p; do
