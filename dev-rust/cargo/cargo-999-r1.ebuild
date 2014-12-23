@@ -47,7 +47,6 @@ src_install() {
 	into /usr
 	insinto /usr
 	dobin bin/cargo
-	dolib lib/manifest
 
 	dodoc share/doc/cargo/LICENSE-MIT
 	dodoc share/doc/cargo/LICENSE-THIRD-PARTY
