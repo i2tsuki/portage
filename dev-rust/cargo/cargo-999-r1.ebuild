@@ -30,12 +30,6 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-no-sanity-check.patch"
-	:
-}
-
-
-src_configure() {
-	:
 }
 
 src_compile(){
