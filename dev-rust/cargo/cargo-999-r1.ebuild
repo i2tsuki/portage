@@ -42,6 +42,7 @@ src_compile(){
 	:
 }
 
-_install() {
-	doexe ./install.sh --prefix=/usr
+src_install() {
+	doexe ./install.sh --prefix=${D}
+	doins
 }
