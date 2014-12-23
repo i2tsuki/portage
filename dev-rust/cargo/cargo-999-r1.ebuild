@@ -45,8 +45,18 @@ src_compile(){
 src_install() {
 	./install.sh --prefix=${D} --disable-verify
 	into /usr
-	dodir ./bin
-	dodir ./lib
-	dodir ./share
-	dodir ./etc
+	insinto /usr
+	dobin bin/cargo
+	dolib lib/manifest
+
+	dodoc share/doc/cargo/LICENSE-MIT
+	dodoc share/doc/cargo/LICENSE-THIRD-PARTY
+	dodoc share/doc/cargo/README.md
+	dodoc share/doc/cargo/LICENSE-APACHE
+
+	doman share/man/man1/cargo.1
+
+	doins share/zsh/site-functions/_cargo
+
+	doins ./etc/bash_completion.d/cargo
 }
