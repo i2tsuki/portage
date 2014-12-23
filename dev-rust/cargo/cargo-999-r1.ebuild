@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	# epatch "${FILESDIR}/${PN}-no-sanity-check.patch"
+	epatch "${FILESDIR}/${PN}-no-sanity-check.patch"
 	:
 }
 
@@ -43,6 +43,10 @@ src_compile(){
 }
 
 src_install() {
-	doexe ./install.sh --prefix=${D}
-	doins
+	./install.sh --prefix=${D} --disable-verify
+	into /usr
+	dodir ./bin
+	dodir ./lib
+	dodir ./share
+	dodir ./etc
 }
