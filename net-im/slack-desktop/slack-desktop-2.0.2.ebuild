@@ -61,12 +61,12 @@ src_unpack() { unpack_deb ${A}; }
 
 src_prepare() {
 	rm -r etc usr/share/lintian
-	mv usr/share/doc/${PN} usr/share/doc/${P}
+	mv usr/share/doc/slack usr/share/doc/slack-${PV}
 }
 
 src_install() {
 	insinto /
 	doins -r usr
 	exeinto /usr/share/slack
-	doexe usr/share/slack/slack
+	doexe usr/lib/slack/slack
 }
