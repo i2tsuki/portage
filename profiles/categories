@@ -12,6 +12,5 @@ metadata
 net-im
 profiles
 x11-misc
-dev-ruby
 dev-rust
 www-plugins
