@@ -10,7 +10,6 @@ games-emulation
 gnome-extra
 metadata
 net-im
-net-misc
 profiles
 x11-misc
 dev-ruby
