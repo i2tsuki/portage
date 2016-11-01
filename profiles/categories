@@ -9,7 +9,6 @@ dev-python
 games-emulation
 gnome-extra
 metadata
-net-im
 profiles
 x11-misc
 dev-rust
