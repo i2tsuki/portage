@@ -48,7 +48,7 @@ src_install(){
 	dosym "/opt/${PN}/code" "/usr/bin/${PN}"
 	make_wrapper "${PN}" "/opt/${PN}/code"
 	make_desktop_entry "${PN}" "Visual Studio Code" "${PN}" "Development;IDE"
-	doicon ${FILESDIR}/${PN}.png
+	# doicon ${FILESDIR}/${PN}.png
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/libnode.so"
 	insinto "/usr/share/licenses/${PN}"
