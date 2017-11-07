@@ -1,13 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=2
 
-inherit autotools eutils flag-o-matic linux-info multilib
+inherit eutils flag-o-matic linux-info multilib
 
 DESCRIPTION="A daemon to run x86 code in an emulated environment"
 HOMEPAGE="https://dev.gentoo.org/~spock/projects/uvesafb/"
-SRC_URI="https://github.com/mjanusz/${PN}/archive/${P}.tar.gz"
+SRC_URI="ftp://ftp.calculate-linux.org/calculate/source/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,10 +17,7 @@ IUSE="debug x86emu"
 DEPEND="dev-libs/klibc"
 RDEPEND=""
 
-PATCHES=( "${FILESDIR}/00000000-atomic_t.patch" )
-
-MY_PN=${PN/v/}
-S="${WORKDIR}/${PN}-${MY_PN}-${PV}"
+S="${WORKDIR}/${P//_*/}"
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -32,7 +29,6 @@ src_prepare() {
 		eerror "prior to merging this package."
 		die "Kernel not patched with uvesafb."
 	fi
-	default
 }
 
 src_configure() {
@@ -42,7 +38,6 @@ src_configure() {
 src_compile() {
 	# Disable stack protector, as it does not work with klibc (bug #346397).
 	filter-flags -fstack-protector -fstack-protector-all
-	#append-cflags "-nostdinc -I/usr/include -I/usr/local/include"
 	emake KDIR="${KV_DIR}" || die
 }
 
