@@ -43,7 +43,6 @@ src_install(){
 	doins -r *
 	dosym "/opt/${PN}/code" "/usr/bin/visual-studio-code"
 	insinto "/usr/share/applications"
-	doins ${FILESDIR}/${PN}.desktop
 	insinto "/usr/share/pixmaps"
 	doins ${FILESDIR}/${PN}.png
 	fperms +x "/opt/${PN}/code"
