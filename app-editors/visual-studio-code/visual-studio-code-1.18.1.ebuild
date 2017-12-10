@@ -44,7 +44,6 @@ src_install(){
 	dosym "/opt/${PN}/code" "/usr/bin/visual-studio-code"
 	insinto "/usr/share/applications"
 	insinto "/usr/share/pixmaps"
-	doins ${FILESDIR}/${PN}.png
 	fperms +x "/opt/${PN}/code"
 	fperms +x "/opt/${PN}/bin/code"
 	fperms +x "/opt/${PN}/libffmpeg.so"
