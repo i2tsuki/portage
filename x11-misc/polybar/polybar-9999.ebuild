@@ -13,7 +13,7 @@ EGIT_CLONE_TYPE="shallow"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 
 IUSE="alsa i3wm mpd github +network"
 RDEPEND="
