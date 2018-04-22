@@ -30,9 +30,6 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX=/usr install
 	dodoc doc/{CONTRIBUTING,MISC,TODO}.md
 
-	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}"/${PN}-session ${PN}
-
 	insinto /usr/share/xsessions
 	doins contrib/freedesktop/bspwm.desktop
 
