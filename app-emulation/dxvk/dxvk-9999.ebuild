@@ -52,7 +52,9 @@ multilib_src_compile() {
 
 multilib_src_install() {
 	meson_src_install
-	install -m 0755 ${WORKDIR}/${P}/setup_dxvk.sh /usr/bin/seup_dxvk.sh
+	insinto /usr/bin
+	insopts -m0755
+	doins ${WORKDIR}/${P}/setup_dxvk.sh
 }
 
 pkg_postinst() {
