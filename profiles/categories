@@ -5,6 +5,7 @@ app-text
 app-office
 dev-libs
 dev-python
+gnome-base
 gnome-extra
 media-sound
 metadata
